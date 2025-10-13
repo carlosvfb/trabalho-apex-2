@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fato ou Fake — Verificação de Notícias</title>
+    <meta name="description" content="Landing page educativa sobre fake news, desinformação e verificação de fatos." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Martian+Mono:wght@600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <a class="skip-link" href="#topicos">Pular para conteúdo</a>
+
+    <header class="site-header" id="inicio" aria-label="Cabeçalho do site">
+      <div class="container header-content">
+        <a class="brand" href="#inicio" aria-label="Ir para início">
+          <span class="logo" aria-hidden="true">
+            <!-- Logo: escudo com check, remetendo à verificação de fatos -->
+            <svg viewBox="0 0 64 64" width="32" height="32" role="img" aria-label="Logo">
+              <defs>
+                <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#2dd4bf"/>
+                  <stop offset="100%" stop-color="#60a5fa"/>
+                </linearGradient>
+              </defs>
+              <path d="M32 4l20 8v15c0 14.4-10.1 27.5-20 33-9.9-5.5-20-18.6-20-33V12l20-8z" fill="url(#g)"/>
+              <path d="M27 34l-6-6 3-3 3 3 10-10 3 3-13 13z" fill="#0b1220"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <strong>Fato ou Fake</strong>
+            <span class="brand-sub">Verificação de Notícias</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Menu de navegação">
+          <ul>
+            <li><a href="#topicos">Tópicos</a></li>
+            <li><a href="#bibliografia">Bibliografia</a></li>
+            <li><a href="#colaboradores">Colaboradores</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero container" aria-label="Introdução">
+      <div class="hero-text">
+        <h1 class="title">Desinformação se espalha rápido. Verificar é essencial.</h1>
+        <p class="subtitle">Aprenda como reconhecer pistas de <strong>fake news</strong>, reduzir a exposição à desinformação e adotar práticas de verificação de fatos no dia a dia.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#topicos">Explorar tópicos</a>
+          <a class="btn outline" href="#bibliografia">Ver referências</a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="topicos" class="container section" aria-label="Principais tópicos sobre fake news">
+        <h2 class="section-title">Tópicos em destaque</h2>
+        <p class="section-desc">Cada card destaca um padrão comum de desinformação. Clique em "Saiba mais" para expandir detalhes e exemplos.</p>
+
+        <div class="cards-grid">
+          <!-- Novo: Informação falsa com aparência de oficial -->
+          <article class="card" aria-expanded="false">
+            <figure class="card-figure" aria-hidden="true">
+              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
+                <rect x="8" y="12" width="48" height="36" rx="6" fill="#2dd4bf" opacity="0.18" />
+                <text x="14" y="36" font-size="16" fill="#60a5fa">Oficial?</text>
+              </svg>
+            </figure>
+            <div class="card-body">
+              <h3>Informação falsa com aparência de oficial</h3>
+              <p class="summary">Posts que imitam visual de órgãos públicos ou veículos de imprensa para ganhar credibilidade.</p>
+              <button class="btn small more-btn" type="button">Saiba mais</button>
+              <div class="details" hidden>
+                <p>Cheque o domínio, o perfil verificado e o documento original. Sites e perfis falsos copiam identidade visual; confirme no portal oficial e em comunicados.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Novo: Citações inventadas ou distorcidas -->
+          <article class="card" aria-expanded="false">
+            <figure class="card-figure" aria-hidden="true">
+              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
+                <circle cx="20" cy="22" r="10" fill="#ef4444" opacity="0.18" />
+                <path d="M16 46h32" stroke="#ef4444" stroke-width="5" stroke-linecap="round" />
+              </svg>
+            </figure>
+            <div class="card-body">
+              <h3>Citações inventadas ou distorcidas</h3>
+              <p class="summary">Frases atribuídas a especialistas ou instituições sem registro verificável.</p>
+              <button class="btn small more-btn" type="button">Saiba mais</button>
+              <div class="details" hidden>
+                <p>Procure a fonte primária (entrevista, relatório, post oficial). Use aspas exatas, data e contexto. Se não houver registro confiável, trate como falso.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Novo: Boatos virais sem fonte -->
+          <article class="card" aria-expanded="false">
+            <figure class="card-figure" aria-hidden="true">
+              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
+                <polygon points="8,28 56,28 32,52" fill="#f59e0b" opacity="0.18" />
+                <text x="12" y="24" font-size="14" fill="#f59e0b">viral</text>
+              </svg>
+            </figure>
+            <div class="card-body">
+              <h3>Boatos virais sem fonte</h3>
+              <p class="summary">Mensagens compartilhadas em massa que pedem “repasse” e não indicam origem confiável.</p>
+              <button class="btn small more-btn" type="button">Saiba mais</button>
+              <div class="details" hidden>
+                <p>Desconfie de gatilhos de urgência e apelo emocional. Busque cobertura jornalística, nota oficial ou checagens. Não compartilhe sem verificação.</p>
+              </div>
+            </div>
+          </article>
+          <!-- Card 1 -->
+          <article class="card" aria-expanded="false">
+            <figure class="card-figure" aria-hidden="true">
+              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
+                <rect x="6" y="10" width="52" height="44" rx="6" fill="#ef4444" opacity="0.15" />
+                <text x="16" y="36" font-size="20" fill="#ef4444">! ! !</text>
+              </svg>
+            </figure>
+            <div class="card-body">
+              <h3>Título sensacionalista</h3>
+              <p class="summary">Uso de palavras impactantes, caixa alta e pontuação exagerada para atrair cliques e provocar reação emocional.</p>
+              <button class="btn small more-btn" type="button">Saiba mais</button>
+              <div class="details" hidden>
+                <p>Desconfie de títulos muito apelativos. Leia além do título e procure a fonte original. Verifique se há dados e evidências, não apenas opinião.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" aria-expanded="false">
+            <figure class="card-figure" aria-hidden="true">
+              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
+                <circle cx="24" cy="28" r="12" fill="#60a5fa" opacity="0.18" />
+                <line x1="36" y1="40" x2="52" y2="56" stroke="#2dd4bf" stroke-width="6" stroke-linecap="round" />
+              </svg>
+            </figure>
+            <div class="card-body">
+              <h3>Imagens fora de contexto</h3>
+              <p class="summary">Fotos antigas ou de outros eventos são apresentadas como se fossem atuais para distorcer a percepção.</p>
+              <button class="btn small more-btn" type="button">Saiba mais</button>
+              <div class="details" hidden>
+                <p>Faça busca reversa de imagens e verifique data/lugar. Ferramentas como Google Imagens, TinEye e Yandex ajudam a descobrir a origem.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" aria-expanded="false">
+            <figure class="card-figure" aria-hidden="true">
+              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
+                <rect x="10" y="12" width="44" height="32" rx="6" fill="#f59e0b" opacity="0.18" />
+                <circle cx="26" cy="44" r="8" fill="#f59e0b" />
+              </svg>
+            </figure>
+            <div class="card-body">
+              <h3>Clickbait</h3>
+              <p class="summary">Promessas exageradas que não se cumprem no conteúdo. O objetivo é gerar tráfego, não informar.</p>
+              <button class="btn small more-btn" type="button">Saiba mais</button>
+              <div class="details" hidden>
+                <p>Verifique se há fontes confiáveis e se o conteúdo corresponde ao título. Se a matéria for rasa ou trivial, desconfie.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card" aria-expanded="false">
+            <figure class="card-figure" aria-hidden="true">
+              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
+                <rect x="12" y="10" width="40" height="32" rx="4" fill="#c084fc" opacity="0.20" />
+                <path d="M22 32c10 4 12-8 20-4" stroke="#c084fc" stroke-width="4" fill="none" />
+              </svg>
+            </figure>
+            <div class="card-body">
+              <h3>Dados manipulados</h3>
+              <p class="summary">Gráficos e números podem ser apresentados sem contexto ou com recortes seletivos para sugerir conclusões enganosas.</p>
+              <button class="btn small more-btn" type="button">Saiba mais</button>
+              <div class="details" hidden>
+                <p>Observe a escala, o período e a fonte dos dados. Procure relatórios originais e compare com outras fontes independentes.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+      <section id="bibliografia" class="container section" aria-label="Bibliografia e referências">
+        <h2 class="section-title">Bibliografia</h2>
+        <p class="section-desc">Referências para aprofundar o tema de desinformação e fact-checking. Clique nos botões para ver detalhes e acessar as fontes.</p>
+
+        <div class="refs-list">
+          <div class="ref-item">
+            <button class="ref-btn" type="button" aria-expanded="false">Guia de verificação de fatos</button>
+            <div class="ref-details" hidden>
+              <p>Manual prático de técnicas para checagem, compilado por especialistas.</p>
+              <a class="ref-link" href="https://firstdraftnews.org/education/" target="_blank" rel="noopener">First Draft – Education</a>
+            </div>
+          </div>
+
+          <div class="ref-item">
+            <button class="ref-btn" type="button" aria-expanded="false">Pesquisa sobre desinformação online</button>
+            <div class="ref-details" hidden>
+              <p>Estudos empíricos sobre propagação de boatos e seus efeitos.</p>
+              <a class="ref-link" href="https://www.pewresearch.org/topic/news-habits-media/fake-news/" target="_blank" rel="noopener">Pew Research – Fake News</a>
+            </div>
+          </div>
+
+          <div class="ref-item">
+            <button class="ref-btn" type="button" aria-expanded="false">Ferramentas para checagem de imagens</button>
+            <div class="ref-details" hidden>
+              <p>Lista de ferramentas úteis para busca reversa e análise visual.</p>
+              <a class="ref-link" href="https://support.google.com/websearch/answer/1325808" target="_blank" rel="noopener">Google – Busca por imagem</a>
+            </div>
+          </div>
+
+          <!-- Migração dos conteúdos recomendados para Bibliografia -->
+          <div class="ref-item">
+            <button class="ref-btn" type="button" aria-expanded="false">Aos Fatos — Política Editorial</button>
+            <div class="ref-details" hidden>
+              <p>Compromissos de rigor, transparência e correções abertas no combate à desinformação.</p>
+              <a class="ref-link" href="https://www.aosfatos.org/politica-editorial/" target="_blank" rel="noopener">aosfatos.org/politica-editorial</a>
+            </div>
+          </div>
+
+          <div class="ref-item">
+            <button class="ref-btn" type="button" aria-expanded="false">UNESCO — Jornalismo, fake news & desinformação</button>
+            <div class="ref-details" hidden>
+              <p>Manual para educação e treinamento em jornalismo sobre notícias falsas e desinformação.</p>
+              <a class="ref-link" href="https://unesdoc.unesco.org/ark:/48223/pf0000368647" target="_blank" rel="noopener">unesdoc.unesco.org/ark:/48223/pf0000368647</a>
+            </div>
+          </div>
+
+          <div class="ref-item">
+            <button class="ref-btn" type="button" aria-expanded="false">TSE — Programa Permanente de Enfrentamento à Desinformação</button>
+            <div class="ref-details" hidden>
+              <p>Relatório e ações da Justiça Eleitoral contra desinformação nas eleições, incluindo o Siade.</p>
+              <a class="ref-link" href="https://www.tse.jus.br/comunicacao/noticias/2024/Dezembro/tse-publica-resultados-do-programa-permanente-de-enfrentamento-a-desinformacao-nas-eleicoes-2024" target="_blank" rel="noopener">tse.jus.br — resultados PPED 2024</a>
+            </div>
+          </div>
+
+          <div class="ref-item">
+            <button class="ref-btn" type="button" aria-expanded="false">Lupa — Observatório Lupa</button>
+            <div class="ref-details" hidden>
+              <p>Frente de pesquisa aplicada e inteligência de dados para mapear narrativas de desinformação.</p>
+              <a class="ref-link" href="https://lupa.uol.com.br/observatorio" target="_blank" rel="noopener">lupa.uol.com.br/observatorio</a>
+            </div>
+          </div>
+
+          <div class="ref-item">
+            <button class="ref-btn" type="button" aria-expanded="false">Projeto Comprova — Sobre e Metodologia</button>
+            <div class="ref-details" hidden>
+              <p>Iniciativa colaborativa apartidária; princípios de rigor, independência e transparência nas verificações.</p>
+              <a class="ref-link" href="https://projetocomprova.com.br/about/" target="_blank" rel="noopener">projetocomprova.com.br/about/</a>
+              <br/>
+              <a class="ref-link" href="https://projetocomprova.com.br/about/faqs/" target="_blank" rel="noopener">projetocomprova.com.br/about/faqs/</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="colaboradores" class="container section" aria-label="Colaboradores do projeto">
+        <h2 class="section-title">Colaboradores</h2>
+        <p class="section-desc">Time responsável pelo conteúdo e desenvolvimento deste projeto.</p>
+
+        <div class="team-grid">
+          <article class="person">
+            <div class="avatar" aria-hidden="true" data-initials="CV"></div>
+            <div class="person-body">
+              <h3>Carlos Vítor Faria Barboza</h3>
+            </div>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true" data-initials="JJ"></div>
+            <div class="person-body">
+              <h3>José Jordano Sousa Simão</h3>
+            </div>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true" data-initials="HN"></div>
+            <div class="person-body">
+              <h3>Helton do Nascimento</h3>
+            </div>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true" data-initials="RM"></div>
+            <div class="person-body">
+              <h3>Renato Fernandes de Mattos</h3>
+            </div>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true" data-initials="MR"></div>
+            <div class="person-body">
+              <h3>Matheus Pereira Dos Reis</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contato" class="site-footer" aria-label="Rodapé">
+      <div class="container footer-content">
+        <p class="thanks">Obrigado pela visita! Compartilhe conhecimento, não desinformação.</p>
+        <p class="fineprint">© 2025 ADS - Apex II. Todos os direitos reservados.</p>
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>

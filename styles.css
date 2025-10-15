@@ -80,7 +80,7 @@ body {
 .card[aria-expanded="true"] { outline: 2px solid rgba(96,165,250,0.35); }
 
 /* Bibliografia */
-.refs-list { display: grid; gap: 12px; }
+.refs-list { display: flex; gap: 12px;  flex-direction: column;}
 .ref-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
 .ref-btn { width: 100%; text-align: left; background: transparent; border: 0; color: var(--text); padding: 12px 14px; display: grid; grid-template-columns: 1fr auto; align-items: center; }
 .ref-btn::after { content: "▼"; font-size: 0.8rem; color: var(--muted); transform: translateY(1px); }

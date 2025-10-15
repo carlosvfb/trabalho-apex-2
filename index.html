@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./assets/logo.webp" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Martian+Mono:wght@600&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -17,17 +18,7 @@
       <div class="container header-content">
         <a class="brand" href="#inicio" aria-label="Ir para início">
           <span class="logo" aria-hidden="true">
-            <!-- Logo: escudo com check, remetendo à verificação de fatos -->
-            <svg viewBox="0 0 64 64" width="32" height="32" role="img" aria-label="Logo">
-              <defs>
-                <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#2dd4bf"/>
-                  <stop offset="100%" stop-color="#60a5fa"/>
-                </linearGradient>
-              </defs>
-              <path d="M32 4l20 8v15c0 14.4-10.1 27.5-20 33-9.9-5.5-20-18.6-20-33V12l20-8z" fill="url(#g)"/>
-              <path d="M27 34l-6-6 3-3 3 3 10-10 3 3-13 13z" fill="#0b1220"/>
-            </svg>
+            <img src="./assets/logo.webp" alt="logo">
           </span>
           <span class="brand-text">
             <strong>Fato ou Fake</strong>
@@ -46,7 +37,6 @@
             <li><a href="#topicos">Tópicos</a></li>
             <li><a href="#bibliografia">Bibliografia</a></li>
             <li><a href="#colaboradores">Colaboradores</a></li>
-            <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
       </div>
@@ -69,50 +59,91 @@
         <p class="section-desc">Cada card destaca um padrão comum de desinformação. Clique em "Saiba mais" para expandir detalhes e exemplos.</p>
 
         <div class="cards-grid">
+          <!-- Novo: Phishing -->
+          <article class="card" aria-expanded="false">
+            <img src="./assets/card-0.webp" alt="Phishing">
+            <div class="card-body">
+              <h3>Phishing: aprenda a identificar e agir</h3>
+              <p class="summary">Golpes digitais que tentam roubar dados pessoais através de mensagens e sites falsos.</p>
+              <button class="btn small more-btn" type="button">Saiba mais</button>
+              <div class="details" hidden>
+                <h4>🚫 NÃO CAIA NO GOLPE: 5 PISTAS ANTES DE CLICAR!</h4>
+                <ul class="details-list">
+                  <li><strong>Remetente estranho:</strong> Veja o endereço completo (ex: contato@empresoficial.com ≠ contato@empresaoficial.com)</li>
+                  <li><strong>Tom urgente:</strong> Mensagens que forçam pressa são sinal vermelho</li>
+                  <li><strong>Erros de português:</strong> Golpistas quase sempre cometem erros gramaticais ou de digitação</li>
+                  <li><strong>Anexo inesperado:</strong> Não abra – pode conter vírus ou malware</li>
+                  <li><strong>Links suspeitos:</strong> Passe o mouse (computador) ou pressione e segure (celular) para ver o endereço real</li>
+                </ul>
+                <p>Ao identificar uma tentativa de phishing, denuncie ao provedor de email, à empresa supostamente representada e nunca compartilhe dados sensíveis por email ou mensagens.</p>
+              </div>
+            </div>
+          </article>
+          
           <!-- Novo: Informação falsa com aparência de oficial -->
           <article class="card" aria-expanded="false">
-            <figure class="card-figure" aria-hidden="true">
-              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
-                <rect x="8" y="12" width="48" height="36" rx="6" fill="#2dd4bf" opacity="0.18" />
-                <text x="14" y="36" font-size="16" fill="#60a5fa">Oficial?</text>
-              </svg>
-            </figure>
+            <img src="./assets/card-1.jpg" alt="Fake">
             <div class="card-body">
               <h3>Informação falsa com aparência de oficial</h3>
               <p class="summary">Posts que imitam visual de órgãos públicos ou veículos de imprensa para ganhar credibilidade.</p>
               <button class="btn small more-btn" type="button">Saiba mais</button>
               <div class="details" hidden>
-                <p>Cheque o domínio, o perfil verificado e o documento original. Sites e perfis falsos copiam identidade visual; confirme no portal oficial e em comunicados.</p>
+                <ul class="details-list">
+                  <li>É comum sites imitarem o visual de órgãos públicos ou veículos de imprensa para transmitir informações distorcidas.</li>
+                  <li>Usam logotipos, cores e formatos semelhantes aos originais para parecerem confiáveis.</li>
+                  <li>Outra tática é exibir um print de um site oficial, mas com o conteúdo adulterado para passar credibilidade.</li>
+                  <li>Também circulam vídeos com marcas de emissoras conhecidas, mas com falas manipuladas ou fora de contexto.</li>
+                  <li>Perfis falsos em redes sociais simulam contas verificadas de instituições ou jornalistas.</li>
+                  <li>Manchetes falsas são montadas com o layout de portais famosos para espalhar boatos.</li>
+                  <li>Alguns conteúdos usam linguagem técnica ou jurídica para parecerem legítimos, mesmo sendo enganosos.</li>
+                  <li>Falsas notas de esclarecimento ou comunicados oficiais são criados para confundir o público.</li>
+                  <li>Até QR codes e links encurtados são usados para mascarar sites falsos como se fossem páginas oficiais.</li>
+                </ul>
               </div>
             </div>
           </article>
 
           <!-- Novo: Citações inventadas ou distorcidas -->
           <article class="card" aria-expanded="false">
-            <figure class="card-figure" aria-hidden="true">
-              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
-                <circle cx="20" cy="22" r="10" fill="#ef4444" opacity="0.18" />
-                <path d="M16 46h32" stroke="#ef4444" stroke-width="5" stroke-linecap="round" />
-              </svg>
-            </figure>
+            <img src="./assets/card-2.jpg" alt="falso">
             <div class="card-body">
-              <h3>Citações inventadas ou distorcidas</h3>
+              <h3>Exemplos de Fake News com Citações Inventadas ou Distorcidas</h3>
               <p class="summary">Frases atribuídas a especialistas ou instituições sem registro verificável.</p>
               <button class="btn small more-btn" type="button">Saiba mais</button>
               <div class="details" hidden>
-                <p>Procure a fonte primária (entrevista, relatório, post oficial). Use aspas exatas, data e contexto. Se não houver registro confiável, trate como falso.</p>
+                <ol>
+                  <li>Circulam pelas redes sociais mensagens em áudio e vídeo que afirmam que as vacinas contra a Covid-19 têm um chip em forma líquida que vem com uma codificação que traz uma leitura para inteligência artificial, permitindo, assim, controlar os vacinados. Diz ainda que "é como se fosse um chip, mas de forma líquida, que é o plasma"</li>
+                  <li>
+                    <h3>Declaração falsa atribuída à Fiocruz sobre ivermectina</h3>
+                    <ul>
+                      <li>A Fundação Oswaldo Cruz (Fiocruz) esclarece que é falsa a mensagem que vem circulando no WhatsApp e em redes sociais, atribuída à instituição, com orientações de como se proteger contra a Covid-19. Na mensagem, estão colocadas as seguintes informações falsas:</li>
+                      <li>O coronavírus é maior do que o normal; o diâmetro da célula é de 400 a 500 mícrons e, por esse motivo, qualquer máscara impede a sua entrada no organismo. FALSO</li>
+                      <li>O coronavírus, quando cai sobre uma superfície de metal, permanece vivo durante 12 horas. Lavar as mãos com água e sabão é suficiente para destruí-lo. FALSO</li>
+                      <li>O coronavírus, quando cai sobre um tecido, permanece vivo durante nove horas, portanto, lavar a roupa ou colocá-la ao sol durante duas horas será suficiente para eliminá-lo. FALSO</li>
+                      <li>O vírus só vive nas mãos durante 10 minutos. Assim, usar um desinfetante em gel também o eliminará. FALSO</li>
+                      <li>O vírus exposto a uma temperatura de 26° C a 27° C morre. FALSO</li>
+                      <li>A água que esteja exposta ao sol poderá ser consumida sem qualquer perigo. FALSO</li>
+                      <li>Evitar comer gelados ou pratos frios; os alimentos quentes são mais seguros, visto que o calor elimina o vírus. FALSO</li>
+                      <li>Gargarejar com água morna ou salgada mata os vírus que se alojam nas amígdalas e evita que passem para os pulmões. FALSO</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3>Citação inventada de Albert Einstein sobre política</h3>
+                    <h4>Frase popular em grupos de WhatsApp:</h4>
+                    <p>“O mundo não será destruído por aqueles que fazem o mal, mas por aqueles que assistem sem fazer nada.” Apesar de parecer profunda, não há registro de Einstein ter dito isso. É uma frase apócrifa atribuída a ele para dar peso a discursos políticos.</p>
+                  </li>
+                  <li>
+                    <h3>Falsa declaração do Ministério da Saúde sobre máscaras</h3>
+                    <p>Durante a pandemia, circulou uma imagem com o logo do Ministério da Saúde dizendo que “máscaras causam hipoxia e não devem ser usadas por mais de 30 minutos”. Não há qualquer recomendação oficial nesse sentido. A imagem foi manipulada.</p>
+                  </li>
+                </ol>
               </div>
             </div>
           </article>
 
           <!-- Novo: Boatos virais sem fonte -->
           <article class="card" aria-expanded="false">
-            <figure class="card-figure" aria-hidden="true">
-              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
-                <polygon points="8,28 56,28 32,52" fill="#f59e0b" opacity="0.18" />
-                <text x="12" y="24" font-size="14" fill="#f59e0b">viral</text>
-              </svg>
-            </figure>
+            <img src="./assets/card-3.jpg" alt="">
             <div class="card-body">
               <h3>Boatos virais sem fonte</h3>
               <p class="summary">Mensagens compartilhadas em massa que pedem “repasse” e não indicam origem confiável.</p>
@@ -124,12 +155,7 @@
           </article>
           <!-- Card 1 -->
           <article class="card" aria-expanded="false">
-            <figure class="card-figure" aria-hidden="true">
-              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
-                <rect x="6" y="10" width="52" height="44" rx="6" fill="#ef4444" opacity="0.15" />
-                <text x="16" y="36" font-size="20" fill="#ef4444">! ! !</text>
-              </svg>
-            </figure>
+            <img src="./assets/card-4.jpg" alt="">
             <div class="card-body">
               <h3>Título sensacionalista</h3>
               <p class="summary">Uso de palavras impactantes, caixa alta e pontuação exagerada para atrair cliques e provocar reação emocional.</p>
@@ -142,12 +168,7 @@
 
           <!-- Card 2 -->
           <article class="card" aria-expanded="false">
-            <figure class="card-figure" aria-hidden="true">
-              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
-                <circle cx="24" cy="28" r="12" fill="#60a5fa" opacity="0.18" />
-                <line x1="36" y1="40" x2="52" y2="56" stroke="#2dd4bf" stroke-width="6" stroke-linecap="round" />
-              </svg>
-            </figure>
+            <img src="./assets/card-5.webp" alt="">
             <div class="card-body">
               <h3>Imagens fora de contexto</h3>
               <p class="summary">Fotos antigas ou de outros eventos são apresentadas como se fossem atuais para distorcer a percepção.</p>
@@ -172,24 +193,6 @@
               <button class="btn small more-btn" type="button">Saiba mais</button>
               <div class="details" hidden>
                 <p>Verifique se há fontes confiáveis e se o conteúdo corresponde ao título. Se a matéria for rasa ou trivial, desconfie.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="card" aria-expanded="false">
-            <figure class="card-figure" aria-hidden="true">
-              <svg class="card-illustration" viewBox="0 0 64 64" width="64" height="64">
-                <rect x="12" y="10" width="40" height="32" rx="4" fill="#c084fc" opacity="0.20" />
-                <path d="M22 32c10 4 12-8 20-4" stroke="#c084fc" stroke-width="4" fill="none" />
-              </svg>
-            </figure>
-            <div class="card-body">
-              <h3>Dados manipulados</h3>
-              <p class="summary">Gráficos e números podem ser apresentados sem contexto ou com recortes seletivos para sugerir conclusões enganosas.</p>
-              <button class="btn small more-btn" type="button">Saiba mais</button>
-              <div class="details" hidden>
-                <p>Observe a escala, o período e a fonte dos dados. Procure relatórios originais e compare com outras fontes independentes.</p>
               </div>
             </div>
           </article>
@@ -243,6 +246,23 @@
               <a class="ref-link" href="https://projetocomprova.com.br/about/faqs/" target="_blank" rel="noopener">projetocomprova.com.br/about/faqs/</a>
             </div>
           </div>
+
+          <!-- Novos links adicionados -->
+          <div class="ref-item">
+            <button class="ref-btn" type="button" aria-expanded="false">G1 — É fake que vacina contra Covid-19 tem chip</button>
+            <div class="ref-details" hidden>
+              <p>Verificação de fatos sobre boatos relacionados à vacina contra Covid-19.</p>
+              <a class="ref-link" href="https://g1.globo.com/fato-ou-fake/coronavirus/noticia/2021/01/27/e-fake-que-vacina-contra-covid-19-tem-chip-liquido-e-inteligencia-artificial-para-controle-populacional.ghtml" target="_blank" rel="noopener">g1.globo.com/fato-ou-fake/coronavirus</a>
+            </div>
+          </div>
+
+          <div class="ref-item">
+            <button class="ref-btn" type="button" aria-expanded="false">Fiocruz — Esclarecimento sobre informações falsas</button>
+            <div class="ref-details" hidden>
+              <p>Fundação Oswaldo Cruz esclarece informações falsas que circulam sobre Covid-19.</p>
+              <a class="ref-link" href="https://minas.fiocruz.br/fiocruz-esclarece-informacoes-falsas" target="_blank" rel="noopener">minas.fiocruz.br/fiocruz-esclarece-informacoes-falsas</a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -292,6 +312,19 @@
     </div>
     </footer>
 
+    <!-- Modal para conteúdo "Saiba mais" -->
+    <div id="modal-container" class="modal-container" aria-hidden="true">
+      <div class="modal">
+        <div class="modal-header">
+          <h3 id="modal-title">Título do Card</h3>
+          <button class="modal-close" aria-label="Fechar modal">&times;</button>
+        </div>
+        <div class="modal-content">
+          <p id="modal-text">Conteúdo do card será exibido aqui.</p>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
-  </html>
+</html>

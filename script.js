@@ -12,22 +12,55 @@ if (navToggle && siteNav) {
   });
 }
 
-// Expandir/contrair cards "Saiba mais"
+// Modal para "Saiba mais"
+const modalContainer = qs('#modal-container');
+const modalTitle = qs('#modal-title');
+const modalText = qs('#modal-text');
+const modalClose = qs('.modal-close');
+
+// Função para abrir o modal
+function openModal(title, content) {
+  modalTitle.textContent = title;
+  modalText.innerHTML = content; // Usando innerHTML para preservar formatação HTML
+  modalContainer.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden'; // Impedir rolagem do body
+  
+  // Focar no modal para acessibilidade
+  setTimeout(() => modalClose.focus(), 100);
+}
+
+// Função para fechar o modal
+function closeModal() {
+  modalContainer.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+// Botão de fechar
+modalClose.addEventListener('click', closeModal);
+
+// Fechar ao clicar fora do modal
+modalContainer.addEventListener('click', (e) => {
+  if (e.target === modalContainer) closeModal();
+});
+
+// Fechar com tecla ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modalContainer.getAttribute('aria-hidden') === 'false') {
+    closeModal();
+  }
+});
+
+// Botões "Saiba mais" nos cards
 qsa('.card').forEach(card => {
   const btn = qs('.more-btn', card);
   const details = qs('.details', card);
-  if (!btn || !details) return;
+  const title = qs('h3', card).textContent;
+  const content = details ? details.innerHTML : ''; // Usando innerHTML para preservar formatação HTML
+  
+  if (!btn) return;
+  
   btn.addEventListener('click', () => {
-    const hidden = details.hasAttribute('hidden');
-    if (hidden) {
-      details.removeAttribute('hidden');
-      card.setAttribute('aria-expanded', 'true');
-      btn.textContent = 'Mostrar menos';
-    } else {
-      details.setAttribute('hidden', '');
-      card.setAttribute('aria-expanded', 'false');
-      btn.textContent = 'Saiba mais';
-    }
+    openModal(title, content);
   });
 });
 

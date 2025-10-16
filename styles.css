@@ -144,6 +144,8 @@ body {
   flex-direction: column;
 }
 
+
+
 .modal-container[aria-hidden="false"] .modal {
   transform: translateY(0);
 }
@@ -271,6 +273,7 @@ body {
 /* Grid de colaboradores em 1 coluna no mobile */
 @media (max-width: 720px) {
   .team-grid { grid-template-columns: 1fr; }
+  .informacao { width: 260px; }
 }
 
 /* Foco acessível e consistente */
